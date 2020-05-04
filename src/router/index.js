@@ -6,7 +6,7 @@ Vue.use(Router)
 const router = new Router({
   mode: 'history',
   routes: [
-    { path: '/', name: 'index', component: _ => import('./views/index/index'), meta: { title: 'index' } }
+    { path: '/', name: 'index', component: _ => import('views/index/index'), meta: { title: 'index' } }
   ],
   scrollBehavior (to, from, savedPosition) {
     if (savedPosition) {
@@ -18,7 +18,7 @@ const router = new Router({
 })
 
 router.beforeEach((to, from, next) => {
-  let title = to.meta.title
+  const title = to.meta.title
   if (title) document.title = title
   next()
 })

@@ -2,8 +2,8 @@ module.exports = {
   publicPath: process.env.NODE_ENV === 'development' ? '/' : './',
   outputDir: 'dist',
   assetsDir: 'static',
-  lintOnSave: false,
-  // lintOnSave: process.env.NODE_ENV === 'development' ? 'error' : false,
+  // lintOnSave: false,
+  lintOnSave: process.env.NODE_ENV === 'development' ? 'error' : false,
   productionSourceMap: false,
   devServer: {
     open: true,
@@ -19,13 +19,22 @@ module.exports = {
     //     }
     //   }
     // }
+  },
+  configureWebpack: {
+    // externals: {
+    //   vue: 'Vue',
+    //   vuex: 'Vuex',
+    //   'vue-router': 'VueRouter',
+    //   axios: 'axios'
+    // },
+    resolve: {
+      alias: {
+        assets: '@/assets',
+        components: '@/components',
+        views: '@/views',
+        store: '@/store',
+        utils: '@/utils'
+      }
+    }
   }
-  // configureWebpack: {
-  //   externals: {
-  //     'vue': 'Vue',
-  //     'vuex': 'Vuex',
-  //     'vue-router': 'VueRouter',
-  //     'axios': 'axios'
-  //   }
-  // }
 }
