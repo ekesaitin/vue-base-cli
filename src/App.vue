@@ -1,32 +1,21 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view/>
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+  body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; line-height: 1;}
+  body { background:#fff; color:#333333; font-size:14px; font-family: "微软雅黑","宋体",Verdana, Arial, Helvetica, sans-serif; }
+  td,th,caption { font-size:14px; }
+  h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
+  address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+  a { color:#555; text-decoration:none; }
+  a:hover { text-decoration:none; color: #3388ff;}
+  i{font-size: inherit !important}
+  img { border:none; }
+  ol,ul,li { list-style:none; }
+  input, textarea, select, button { font:14px "微软雅黑","宋体",Verdana,Helvetica,Arial,sans-serif; outline: none;}
+  table { border-collapse:collapse; }
+  [v-cloak] { display: none !important; }
 </style>
