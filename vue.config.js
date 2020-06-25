@@ -2,8 +2,8 @@ module.exports = {
   publicPath: process.env.NODE_ENV === 'development' ? '/' : './',
   outputDir: 'dist',
   assetsDir: 'static',
-  // lintOnSave: false,
-  lintOnSave: process.env.NODE_ENV === 'development' ? 'error' : false,
+  lintOnSave: false,
+  // lintOnSave: process.env.NODE_ENV === 'development' ? 'error' : false,
   productionSourceMap: false,
   devServer: {
     open: true,
